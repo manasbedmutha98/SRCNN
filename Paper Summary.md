@@ -1,4 +1,5 @@
-# A summary of the SRCNN paper ["Image Super-Resolution Using Deep Convolutional Networks"](https://arxiv.org/pdf/1501.00092.pdf)
+# SRCNN Paper Summary
+Original Paper at [Image Super-Resolution Using Deep Convolutional Networks"](https://arxiv.org/pdf/1501.00092.pdf)
 ## Introduction
 * Prior to this, xisting methods apply Dictionary / Sparse Coding based approach
 * Different from the rest - 
@@ -36,17 +37,16 @@ The method consists of 3 sub networks:
 #### Initializing
 * Weights are initialized by Gaussian distribution with zero mean and standard deviation 0.001
 * Learning rate is 10<sup>-4</sup> for the first two layers, and 10<sup>−5</sup> for the last layer.
-
 <i>To avoid border effects during training, all the convolutional layers have no padding, and the network produces a smaller output.</i>
 
 ### Experiments
 Upscaling done on patch size 3; 8×10<sup>8</sup> backpropagations
-### Data
+#### Data
 1. Training:
     * T91 with patch size = 33; around 24,800 images extracted with a stride = 14
     * ImageNet Dataset, 5 million subimages with patch size 33
 2. Validation on Set5/Set14
 
-### Problems
+## Problems
 * Sensitive to number of filters in each layer
 * Can improve on PSNR but not SSIM/MSSIM values

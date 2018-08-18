@@ -1,7 +1,7 @@
 # SRCNN Paper Summary
-Original Paper at [Image Super-Resolution Using Deep Convolutional Networks"](https://arxiv.org/pdf/1501.00092.pdf)
+Original Paper [Image Super-Resolution Using Deep Convolutional Networks](https://arxiv.org/pdf/1501.00092.pdf)
 ## Introduction
-* Prior to this, xisting methods apply Dictionary / Sparse Coding based approach
+* Prior to this, existing methods apply Dictionary / Sparse Coding based approach
 * Different from the rest - 
     1. Does not explicitly learn the dictionaries or manifolds for modeling the patch space. These  are  implicitly  achieved  via  hidden  layers.
     2. Furthermore, the patch extraction and aggregation are also formulated as convolutional layers, so are involved in the optimization. 
@@ -48,5 +48,6 @@ Upscaling done on patch size 3; 8×10<sup>8</sup> backpropagations
 2. Validation on Set5/Set14
 
 ## Problems
+* Very long to converge (10<sup>9</sup> backpropagations)
 * Sensitive to number of filters in each layer
 * Can improve on PSNR but not SSIM/MSSIM values
